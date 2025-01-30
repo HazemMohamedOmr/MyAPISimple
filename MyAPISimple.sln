@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAPISimple", "MyAPISimple\MyAPISimple.csproj", "{BF870D0D-0EE2-44A3-B283-10A6E8CE715C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAPISimple.Core", "MyAPISimple.Core\MyAPISimple.Core.csproj", "{4001DB6C-17F4-4DCB-893D-F2DA41DE5473}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAPISimple.Infrastructure", "MyAPISimple.Infrastructure\MyAPISimple.Infrastructure.csproj", "{87A6A779-5D0C-4553-8AFF-F9D82F5BABEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D5BB7DA7-7FA8-4749-BEBA-CCBF1033D5EA}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
