@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MyAPISimple.Infrastructure.Data;
-using MyAPISimple.Infrastructure.Data.Identity;
+using MyAPISimple.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,16 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// Add Connection Strings
-var ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-{
-    options.UseSqlServer(ConnectionString);
-});
-
-// Add identity
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+// Add Services
+builder.Services.ConfigureDataBaseConnection(builder.Configuration);
+builder.Services.ConfigureIdentity();
+builder.Services.ConfigureUnitOfWork();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

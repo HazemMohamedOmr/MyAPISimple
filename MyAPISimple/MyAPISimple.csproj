@@ -22,4 +22,9 @@
     <ProjectReference Include="..\MyAPISimple.Infrastructure\MyAPISimple.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Constants\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
 </Project>

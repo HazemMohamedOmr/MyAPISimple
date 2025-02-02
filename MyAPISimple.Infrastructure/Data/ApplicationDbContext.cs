@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
+
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyAPISimple.Infrastructure.Data.Configurations;
 using MyAPISimple.Infrastructure.Data.Seeds;
-using MyAPISimple.Infrastructure.Data.Identity;
+using MyAPISimple.Infrastructure.Identity;
 
 namespace MyAPISimple.Infrastructure.Data
 {

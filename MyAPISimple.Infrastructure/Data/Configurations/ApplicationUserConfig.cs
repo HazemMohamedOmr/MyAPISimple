@@ -1,18 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using MyAPISimple.Infrastructure.Data.Identity;
+using MyAPISimple.Infrastructure.Identity;
 
 namespace MyAPISimple.Infrastructure.Data.Configurations
 {
     public class ApplicationUserConfig : IEntityTypeConfiguration<ApplicationUser>
     {
-        public void Configure(EntityTypeBuilder<ApplicationUser> builder)
+        public void Configure(EntityTypeBuilder<ApplicationUser> entity)
         {
-            builder.Property(p => p.FirstName)
+            entity.Property(p => p.FirstName)
                 .IsRequired()
                 .HasMaxLength(50);
 
-            builder.Property(p => p.LastName)
+            entity.Property(p => p.LastName)
                 .IsRequired()
                 .HasMaxLength(50);
         }

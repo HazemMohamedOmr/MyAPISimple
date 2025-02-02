@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MyAPISimple.Core.Interfaces;
 
 namespace MyAPISimple.Controllers
 {
@@ -12,15 +13,20 @@ namespace MyAPISimple.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            //_unitOfWork.User.GetFilteredSortedAsync(e => e.Id == 3, e => e.Email);
+            //_unitOfWork.User.MakeComplexQuery();
+            //_unitOfWork.User.GetByIdAsync(5);
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),

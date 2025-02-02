@@ -17,11 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\Repository\" />
-    <Folder Include="UnitOfWork\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MyAPISimple.Core\MyAPISimple.Core.csproj" />
   </ItemGroup>
 
