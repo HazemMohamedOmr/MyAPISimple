@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MyAPISimple.Core.Interfaces;
 using MyAPISimple.Infrastructure.Data;
 using MyAPISimple.Infrastructure.Identity;
-using MyAPISimple.Infrastructure.Repository.UnitOfWork;
+using MyAPISimple.Infrastructure.Repository;
 
 namespace MyAPISimple.Services
 {

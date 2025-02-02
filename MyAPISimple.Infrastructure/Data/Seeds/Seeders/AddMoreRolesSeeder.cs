@@ -10,7 +10,7 @@ namespace MyAPISimple.Infrastructure.Data.Seeds.Seeders
 {
     public class AddMoreRolesSeeder : ISeeder
     {
-        public void Seed(ModelBuilder modelBuilder)
+        public void Run(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<IdentityRole>().HasData(
                     new IdentityRole

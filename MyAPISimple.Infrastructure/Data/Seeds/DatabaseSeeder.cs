@@ -17,7 +17,7 @@ namespace MyAPISimple.Infrastructure.Data.Seeds
         {
             foreach (var seeder in Seeders)
             {
-                seeder.Seed(modelBuilder);
+                seeder.Run(modelBuilder);
             }
         }
     }

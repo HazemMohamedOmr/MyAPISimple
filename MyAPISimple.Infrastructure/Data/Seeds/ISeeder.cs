@@ -9,6 +9,6 @@ namespace MyAPISimple.Infrastructure.Data.Seeds
 {
     internal interface ISeeder
     {
-        void Seed(ModelBuilder modelBuilder);
+        void Run(ModelBuilder modelBuilder);
     }
 }
